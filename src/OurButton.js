@@ -1,15 +1,14 @@
 import React from "react";
 
 const OurButoon = (props) => {
- 
+//console.log("propsbtn",props.myBtn)
   return (
- 
-    <div className="actionRow">
+     <div className="actionRow">
       <button
         type="button"
         class="btn btn-warning btn-lg style3"
        id="myBtn"
-     // disabled={myBtn==="ok"}
+      disabled={props.myBtn==="ok"}
         onClick={props.insert}
       >
         ADD
@@ -23,9 +22,7 @@ const OurButoon = (props) => {
         Show/Hide List
       </button>
     </div>
-    
-  );
-  
+  ); 
 };
 
 export default OurButoon;

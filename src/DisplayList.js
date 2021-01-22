@@ -32,3 +32,4 @@ const DisplayList = ({ Delete, change, myBtn, list }) => {
 };
 
 export default DisplayList;
+
