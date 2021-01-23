@@ -1,10 +1,10 @@
 import React from "react";
 
-const DisplayList = ({ Delete, change, myBtn, list }) => {
+
+const DisplayList = ({ Delete, change, myBtn, list,insert }) => {
   return (
-    
     <ul>
-      {list.map((item, index) => (
+      { list.map((item, index) => (
         <li class="styleLi" key={index}>
           {item}
           <div style={{ marginLeft: 20 }}>
@@ -21,9 +21,9 @@ const DisplayList = ({ Delete, change, myBtn, list }) => {
               class="btn btn-warning styleEdit disable"
               onClick={() => change(item, index)}
             >
-              
-              {myBtn[index] === "ok" ? "OK" : "Edit"}
+             { myBtn[index]==="ok" ? "OK" : "Edit"}
             </button>
+           
           </div>
         </li>
       ))}

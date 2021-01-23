@@ -8,7 +8,7 @@ const OurButoon = (props) => {
         type="button"
         class="btn btn-warning btn-lg style3"
        id="myBtn"
-      disabled={props.myBtn==="ok"}
+      disabled={props.isEditing==="true"}
         onClick={props.insert}
       >
         ADD
