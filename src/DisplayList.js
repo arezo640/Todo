@@ -1,7 +1,7 @@
 import React from "react";
 
 
-const DisplayList = ({ Delete, change, myBtn, list,insert }) => {
+const DisplayList = ({ Delete, change, myBtn,list,insert }) => {
   return (
     <ul>
       { list.map((item, index) => (
@@ -21,6 +21,7 @@ const DisplayList = ({ Delete, change, myBtn, list,insert }) => {
               class="btn btn-warning styleEdit disable"
               onClick={() => change(item, index)}
             >
+            {/* {isEditing==="true" ? myBtn[index]="Save"  } */}
              { myBtn[index]==="ok" ? "OK" : "Edit"}
             </button>
            
