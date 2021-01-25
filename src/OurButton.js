@@ -1,28 +1,38 @@
 import React from "react";
 
-const OurButoon = (props) => {
-//console.log("propsbtn",props.myBtn)
+const OurButoon = ({ isEditing, insert, update, display }) => {
+  //console.log("propsbtn",props.myBtn)
   return (
-     <div className="actionRow">
-      <button
-        type="button"
-        class="btn btn-warning btn-lg style3"
-       id="myBtn"
-      disabled={props.isEditing==="true" }
-        onClick={props.insert}
-      >
-        ADD
-      </button>
-      
+    <div className="actionRow">
+      {isEditing ? (
+        <button
+          type="button"
+          class="btn btn-warning btn-lg style3"
+          id="myBtn"
+          onClick={update}
+        >
+          Update
+        </button>
+      ) : (
+        <button
+          type="button"
+          class="btn btn-warning btn-lg style3"
+          id="myBtn"
+          onClick={insert}
+        >
+          ADD
+        </button>
+      )}
+
       <button
         type="button"
         class="btn btn-warning btn-lg style2"
-        onClick={props.display}
+        onClick={display}
       >
         Show/Hide List
       </button>
     </div>
-  ); 
+  );
 };
 
 export default OurButoon;
